@@ -1,0 +1,55 @@
+CREATE DATABASE elense;
+USE elense;
+
+
+
+
+CREATE TABLE lenses (
+lense_id INT(4) UNSIGNED NOT NULL 
+AUTO_INCREMENT,
+lense_name VARCHAR(60) NOT NULL,
+lense_price DECIMAL(6,2) UNSIGNED NOT NULL,
+PRIMARY KEY (lense_id),
+INDEX (lense_name),
+INDEX (lense_price)
+) ENGINE=MyISAM;
+
+
+
+CREATE TABLE mycustomers (
+mycustomers_id MEDIUMINT UNSIGNED NOT NULL
+AUTO_INCREMENT,
+first_name VARCHAR(20) NOT NULL,
+last_name VARCHAR(40) NOT NULL,
+email VARCHAR(60) NOT NULL,
+pass CHAR(40) NOT NULL,
+registration_date DATETIME NOT NULL,
+PRIMARY KEY (mycustomers_id),
+INDEX email_pass (email, pass)
+)ENGINE=MyISAM;
+
+CREATE TABLE lenseorders (
+lenseorder_id INT(10) UNSIGNED NOT NULL 
+AUTO_INCREMENT,
+mycustomers_id INT(5) UNSIGNED NOT NULL,
+total_orders DECIMAL(10,2) UNSIGNED NOT NULL,
+order_date TIMESTAMP,
+PRIMARY KEY (lenseorder_id),
+INDEX (mycustomers_id),
+INDEX (order_date)
+) ENGINE=InnoDB;
+
+CREATE TABLE order_details (
+od_id INT(10) UNSIGNED NOT NULL    
+AUTO_INCREMENT,
+lenseorder_id INT(10) UNSIGNED NOT NULL,
+lense_id INT(4) UNSIGNED NOT NULL,
+quantity TINYINT UNSIGNED NOT NULL 
+DEFAULT 1,
+price DECIMAL(6,2) UNSIGNED NOT NULL,
+ship_date DATETIME default NULL,
+PRIMARY KEY (od_id),
+INDEX (lenseorder_id),
+INDEX (lense_id),
+INDEX (ship_date)
+) ENGINE=InnoDB;

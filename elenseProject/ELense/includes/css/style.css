@@ -1,0 +1,204 @@
+/*css rule for page's body*/
+
+body {
+    font-family: Helvetica;
+    background-color: lightyellow;
+}
+
+
+/*css rule h1 heading describes the main page's heading*/
+
+#head {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(28.1%, 30.7%, 87.8%);
+    text-align: center;
+    background-image: url("../images/pattern.jpeg");
+    padding: 0.1cm 0.5cm;
+}
+
+
+/*css rule h2 heading for all cetegory items*/
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/*css rule h3 heading below every image product*/
+
+h3 {
+    margin: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/*css rule for paragraphs*/
+
+p {
+    font-size: 24px;
+}
+
+
+/*css rule for h2 EF Zoom background color*/
+
+#efzoom {
+    background-color: rgb(43.9%, 80.4%, 39.5%);
+}
+
+
+/*css rule for h2 Medium-Range Fixed Focal Length background color*/
+
+#midrange {
+    background-color: rgb(100%, 41.7%, 0%);
+}
+
+
+/*css rule for h2 Macro background color*/
+
+#macro {
+    background-color: rgb(0.3%, 60.5%, 99.5%);
+}
+
+
+/*css rule for logo*/
+
+#logo {
+    max-width: 10%;
+}
+
+
+/*I have made price a .class instead of #id
+css rule for prices in each product*/
+
+.price {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue;
+}
+
+
+/*I have added item class to evry div block
+*css rule for div blocks describing each product item*/
+
+.items {
+    margin: auto;
+    padding: 0px;
+    text-align: center;
+    max-width: 50%;
+}
+
+
+/*css rule for footer*/
+
+#footer {
+    opacity: 0.5;
+    text-align: center;
+}
+
+
+/*css rule for navigation menu*/
+
+#navigation {
+    font-size: 36px;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+
+/*css rule for log in and registration forms*/
+
+.logReg {
+    font-family: Helvetica;
+    display: inline-block;
+    position: center;
+    font-size: 24px;
+    color: darkolivegreen;
+}
+
+
+/*css variables in @keyframes*/
+
+@keyframes bg {
+    from {
+        color: #00fffe;
+    }
+    to {
+        color: #bf07fb;
+    }
+}
+
+@keyframes ng {
+    from {
+        color: #000;
+    }
+    to {
+        color: #c20404;
+    }
+}
+
+
+/*css rule for slogan*/
+
+#slogan {
+    font-family: Helvetica;
+    font-style: italic;
+    font-size: 46px;
+    animation: 2.5s bg infinite alternate;
+    text-align: center;
+    padding: 0px;
+}
+
+
+/*css rule for log in and submit button*/
+
+.button {
+    font-family: Helvetica;
+    font-size: 26px;
+    padding: 0.5cm 2cm;
+}
+
+
+/*css rule for errors*/
+
+.error {
+    font-family: Helvetica;
+    font-size: 26px;
+    padding: 0cm 2cm;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+
+/*css rule for log in-out messages*/
+
+.logi {
+    font-family: Helvetica;
+    text-align: left;
+    font-size: 36px;
+    color: darkolivegreen;
+}
+
+.logou {
+    font-family: Helvetica;
+    text-align: center;
+    font-size: 84px;
+    color: darkolivegreen;
+}
+
+
+/*css rule for registered name*/
+
+.rname {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    font-size: 56px;
+    animation: 3.5s ng infinite alternate;
+}

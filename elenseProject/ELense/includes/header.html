@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>e-Lenses</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="includes/css/style.css" rel="stylesheet">
+    <!--favicon-->
+    <link href="includes/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="head">
+        <h1><img id="logo" src="includes/images/logo.png" />e-Lenses</h1>
+    </div>
+    <!--Navigation Menu-->
+    <div id="navigation">
+        <nav>
+            <a href="index.php ">Home</a>
+            <a href="register.php ">Register</a>
+            <!-- log in /out link-->
+            <?php
+                if ( (isset($_SESSION['mycustomers_id'])) && (!strpos($_SERVER['PHP_SELF'],'logout.php')) ){
+                    echo '<a href="logout.php">Logout</a>'; 
+                }
+                else{
+                    echo '<a href="login.php">Login</a>';
+                }
+            ?>
+        </nav>
+        </ul>
+    </div>
+    <br/>
+    <!--SLOGAN-->
+    <p id="slogan">Because we know that Lense matter!</p>
